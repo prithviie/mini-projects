@@ -1,4 +1,3 @@
-import random
 
 def print_board(bo):
     print()
@@ -86,35 +85,30 @@ def solve(bo):
 
     return False
 
-
-def generate_board():
-    '''returns a new unsolved board'''
-
-    new_board = []
+      
+def main(board):
     
-    for i in range(9):
-        new_board.append([])
-        for j in range(9):
-            new_board[i].append(0)
-
-    solve(new_board)
-
-    for i in range(45):
-        x, y = random.randint(0, 8), random.randint(0, 8)
-        new_board[x][y] = 0
-
-    return new_board
-
-
-def main():
-    
-    board = generate_board()
     print_board(board)
 
-    input('Hit ENTER to solve! ')
+    input('Hit ENTER to solve ')
 
     solve(board)
     print_board(board)
 
 
-main()
+# empty spots shown using number 0
+board = [
+    [3,0,6,  5,0,8,  4,0,0],
+    [5,2,0,  0,0,0,  0,0,0],
+    [0,8,7,  0,0,0,  0,3,1],
+
+    [0,0,3,  0,1,0,  0,8,0],
+    [9,0,0,  8,6,3,  0,0,5],
+    [0,5,0,  0,9,0,  6,0,0],
+
+    [1,3,0,  0,0,0,  2,5,0],
+    [0,0,0,  0,0,0,  0,7,4],
+    [0,0,5,  2,0,6,  3,0,0]
+]
+
+main(board)
