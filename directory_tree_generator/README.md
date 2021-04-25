@@ -4,4 +4,7 @@
 Given a directory path, generates the Directory Tree of its contents.
 
 ## Preview
-<!-- add a screenshot from real use -->
+
+![Output](./output.png)<br>
+
+Provide the relative/complete path of the directory.

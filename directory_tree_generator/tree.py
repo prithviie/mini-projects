@@ -1,11 +1,12 @@
 import os
-os.system('clear')
+import sys
 
 PIPE = "│"
 ELBOW = "└──"
 TEE = "├──"
 PIPE_PREFIX = "│   "
 SPACE_PREFIX = "    "
+initial_dir_level = 0
 
 class Dir:
 
@@ -22,7 +23,6 @@ class Dir:
                 self.files.append(f)
             else:
                 self.dirs.append(Dir(temp_path))
-
 
     def __str__(self):
 
@@ -48,8 +48,23 @@ class Dir:
         return r
 
 
-root_folder = 'directory_tree_generator/hello'
-initial_dir_level = root_folder.count('/')
+def main():
+    global initial_dir_level
 
-root = Dir(root_folder)
-print(root)
+    if len(sys.argv) < 2:
+        root_folder = os.path.normpath('./')
+    else:
+        root_folder = os.path.normpath(sys.argv[1])
+
+    if os.path.isdir(root_folder):
+        initial_dir_level = root_folder.count('/')
+        root = Dir(root_folder)
+        print()
+        print(root)
+
+    else:
+        print('Not a valid directory.')
+
+
+# give the directory location as an argument in the cli before running
+main()

@@ -1,5 +1,3 @@
 games/animated_game
-games/rock_paper_scissors
 games/snake
-directory_tree_generator/hello
 .gitignore
