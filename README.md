@@ -1,10 +1,11 @@
 # Implementations of simple projects
 
 ## Table of contents:
-- [sudoku_solver](https://github.com/prithviie/mini-projects/tree/master/sudoku_solver): Given an unsolved sudoku board, the Backtracking Algorithm solves the sudoku board.
 
-- [directory_tree_generator](https://github.com/prithviie/mini-projects/tree/master/directory_tree_generator): Given a directory path, generates a Directory Tree of its contents.
+- [sudoku_solver](sudoku_solver): Solves a sudoku board using backtracking.
 
-- [games/](https://github.com/prithviie/mini-projects/tree/master/games)
-  - [tictactoe](https://github.com/prithviie/mini-projects/tree/master/games/tictactoe): Tic Tac Toe with AI.
-  - [snake](https://github.com/prithviie/mini-projects/tree/master/games/snake): Basic Snake game in Python.
+- [directory_tree_generator](directory_tree_generator): Given a directory path, generates a Directory Tree of its contents.
+
+- [games/](games)
+  - [tictactoe](games/tictactoe): Tic-Tac-Toe with AI.
+  - [snake](games/snake): Basic snake game in Python.

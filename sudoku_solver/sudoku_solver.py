@@ -42,12 +42,10 @@ def is_valid(bo, num, pos):
     if num in row:
         return False
 
-
     # checking if pos is valid in the column
     col = [bo[i][y] for i in range(len(bo[0]))]
     if num in col:
         return False
-
 
     # checking if pos is valid in box
     box_x = x // 3
@@ -64,7 +62,7 @@ def is_valid(bo, num, pos):
 
 def solve(bo):
     '''solves the board recursively using backtracking'''
-    
+
     find = find_empty(bo)
 
     if not find:
@@ -85,9 +83,9 @@ def solve(bo):
 
     return False
 
-      
+
 def main(board):
-    
+
     print_board(board)
 
     input('Hit ENTER to solve ')
@@ -98,17 +96,17 @@ def main(board):
 
 # empty spots shown using number 0
 board = [
-    [3,0,6,  5,0,8,  4,0,0],
-    [5,2,0,  0,0,0,  0,0,0],
-    [0,8,7,  0,0,0,  0,3,1],
+    [3, 0, 6,  5, 0, 8,  4, 0, 0],
+    [5, 2, 0,  0, 0, 0,  0, 0, 0],
+    [0, 8, 7,  0, 0, 0,  0, 3, 1],
 
-    [0,0,3,  0,1,0,  0,8,0],
-    [9,0,0,  8,6,3,  0,0,5],
-    [0,5,0,  0,9,0,  6,0,0],
+    [0, 0, 3,  0, 1, 0,  0, 8, 0],
+    [9, 0, 0,  8, 6, 3,  0, 0, 5],
+    [0, 5, 0,  0, 9, 0,  6, 0, 0],
 
-    [1,3,0,  0,0,0,  2,5,0],
-    [0,0,0,  0,0,0,  0,7,4],
-    [0,0,5,  2,0,6,  3,0,0]
+    [1, 3, 0,  0, 0, 0,  2, 5, 0],
+    [0, 0, 0,  0, 0, 0,  0, 7, 4],
+    [0, 0, 5,  2, 0, 6,  3, 0, 0]
 ]
 
 main(board)

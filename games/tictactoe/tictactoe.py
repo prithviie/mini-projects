@@ -1,5 +1,6 @@
 import random
 
+
 def print_board(board):
 
     print(' ' + board[1] + ' | ' + board[2] + ' | ' + board[3])
@@ -19,13 +20,13 @@ def space_is_free(pos):
 
 def is_winner(bo, le):
     return (bo[7] == le and bo[8] == le and bo[9] == le) or \
-            (bo[4] == le and bo[5] == le and bo[6] == le) or \
-            (bo[1] == le and bo[2] == le and bo[3] == le) or \
-            (bo[1] == le and bo[4] == le and bo[7] == le) or \
-            (bo[2] == le and bo[5] == le and bo[8] == le) or \
-            (bo[3] == le and bo[6] == le and bo[9] == le) or \
-            (bo[1] == le and bo[5] == le and bo[9] == le) or \
-            (bo[3] == le and bo[5] == le and bo[7] == le)
+        (bo[4] == le and bo[5] == le and bo[6] == le) or \
+        (bo[1] == le and bo[2] == le and bo[3] == le) or \
+        (bo[1] == le and bo[4] == le and bo[7] == le) or \
+        (bo[2] == le and bo[5] == le and bo[8] == le) or \
+        (bo[3] == le and bo[6] == le and bo[9] == le) or \
+        (bo[1] == le and bo[5] == le and bo[9] == le) or \
+        (bo[3] == le and bo[5] == le and bo[7] == le)
 
 
 def select_random(li):
@@ -60,8 +61,9 @@ def player_move():
 
 
 def comp_move():
-    
-    possible_moves = [x for x, letter in enumerate(board) if letter == ' ' and  x != 0]
+
+    possible_moves = [x for x, letter in enumerate(
+        board) if letter == ' ' and x != 0]
     move = 0
 
     for let in ['o', 'x']:
@@ -93,7 +95,7 @@ def comp_move():
 
     if len(edges_open) > 0:
         move = select_random(edges_open)
-    
+
     return move
 
 

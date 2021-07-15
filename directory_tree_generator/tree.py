@@ -8,6 +8,7 @@ PIPE_PREFIX = "│   "
 SPACE_PREFIX = "    "
 initial_dir_level = 0
 
+
 class Dir:
 
     def __init__(self, root_dir):
@@ -41,7 +42,8 @@ class Dir:
 
         for i in range(len(self.files)):
             if i == len(self.files)-1:
-                r += self.level * PIPE_PREFIX + f"{ELBOW} {self.files[i]}" + f"\n{self.level*PIPE_PREFIX}"
+                r += self.level * PIPE_PREFIX + \
+                    f"{ELBOW} {self.files[i]}" + f"\n{self.level*PIPE_PREFIX}"
             else:
                 r += self.level * PIPE_PREFIX + f"{TEE} {self.files[i]}\n"
 
@@ -66,5 +68,6 @@ def main():
         print('Not a valid directory.')
 
 
-# give the directory location as an argument in the cli before running
+# give the directory location as an argument in the cli before running as shown below
+# $ python tree.py directory_location
 main()

@@ -1,3 +1,3 @@
 # Snake game in Python
 
-Requirements: **turtle** module in Python.
+Requirements: `turtle` module in Python.

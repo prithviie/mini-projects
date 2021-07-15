@@ -15,7 +15,7 @@ wn.bgcolor("black")
 wn.setup(width=600, height=600)
 wn.tracer(0)
 
-# snake head 
+# snake head
 head = turtle.Turtle()
 head.speed(0)
 head.shape('square')
@@ -42,7 +42,8 @@ pen.hideturtle()
 pen.speed(0)
 pen.color('white')
 pen.goto(0, 260)
-pen.write("Score: 0    High score: 0", align="center", font=("Courier", 24, "normal"))
+pen.write("Score: 0    High score: 0", align="center",
+          font=("Courier", 24, "normal"))
 
 
 # functions
@@ -63,17 +64,21 @@ def move():
         x = head.xcor()
         head.setx(x + 20)
 
+
 def go_up():
     if head.direction != "down":
         head.direction = "up"
+
 
 def go_down():
     if head.direction != "up":
         head.direction = "down"
 
+
 def go_left():
     if head.direction != "right":
         head.direction = "left"
+
 
 def go_right():
     if head.direction != "left":
@@ -100,14 +105,15 @@ while True:
         # hide segments
         for segment in segments:
             segment.goto(1000, 1000)
-        
+
         # clear segments lists
         segments.clear()
 
         # reset score to 0
         score = 0
         pen.clear()
-        pen.write("Score: {}    High score: {}".format(score, high_score), align="center", font=("Courier", 24, "normal"))
+        pen.write("Score: {}    High score: {}".format(
+            score, high_score), align="center", font=("Courier", 24, "normal"))
 
         # reset the delay
         delay = 0.1
@@ -117,7 +123,7 @@ while True:
         x = random.randint(-290, 290)
         y = random.randint(-290, 290)
         food.goto(x, y)
-        
+
         segment = turtle.Turtle()
         segment.speed(0)
         segment.shape('square')
@@ -135,7 +141,8 @@ while True:
             high_score = score
 
         pen.clear()
-        pen.write("Score: {}    High score: {}".format(score, high_score), align="center", font=("Courier", 24, "normal"))
+        pen.write("Score: {}    High score: {}".format(
+            score, high_score), align="center", font=("Courier", 24, "normal"))
 
     # move the end segment first
     for index in range(len(segments)-1, 0, -1):
@@ -161,18 +168,18 @@ while True:
             # hide segments
             for segment in segments:
                 segment.goto(1000, 1000)
-            
+
             # clear segments lists
             segments.clear()
 
             # reset score to 0
             score = 0
             pen.clear()
-            pen.write("Score: {}    High score: {}".format(score, high_score), align="center", font=("Courier", 24, "normal"))
+            pen.write("Score: {}    High score: {}".format(
+                score, high_score), align="center", font=("Courier", 24, "normal"))
 
             # reset the delay
             delay = 0.1
-
 
     time.sleep(delay)
 
