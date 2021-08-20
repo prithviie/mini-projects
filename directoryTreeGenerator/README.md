@@ -1,10 +1,10 @@
-# Directory Tree Generator
+## Directory Tree Generator
 
-## About the project
+### About the project
 
 Given a directory path, generates the Directory Tree of its contents.
 
-## Preview
+### Preview
 
 Provide the relative/complete path of the directory.
 

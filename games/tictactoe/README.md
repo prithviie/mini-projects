@@ -1,5 +1,3 @@
-# Tic Tac Toe - AI
+## Tic Tac Toe - with AI
 
 Implemented in Java and Python.
-
-Play the game [here](https://prithviie.github.io/html/interactive-pages/tictactoe.html).

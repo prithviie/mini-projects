@@ -1,6 +1,6 @@
-# Sudoku solver using the Backtracking Algorithm
+## Sudoku solver using the Backtracking Algorithm
 
-## About the project
+### About the project
 
 Solves a sudoku board using the _backtracking algorithm_.
 
