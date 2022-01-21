@@ -2,9 +2,9 @@
 
 ## Table of contents:
 
-- [sudokuSolver](sudokuSolver): Solves a sudoku board using backtracking.
+- [directory-tree-generator](directory-tree-generator): Given a directory path, generates a Directory Tree of its contents.
 
-- [directoryTreeGenerator](directoryTreeGenerator): Given a directory path, generates a Directory Tree of its contents.
+- [sudoku-solver](sudoku-solver): Solves a sudoku board using backtracking.
 
 - [games](games)
   - [tictactoe](games/tictactoe): Tic-Tac-Toe with AI.
